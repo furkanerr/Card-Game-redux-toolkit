@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
+
 const initialState  ={
     score:0,
     cards:[]
@@ -15,21 +16,55 @@ export const gameSlice = createSlice({
                 for(let i=1;i<=10;i++){
                     card = {
                         id:i,
-                        src:`src/images/${i}`,
-                        matched:false
+                        src:`/images/${i}.png`,
+                        matched:false,
+                        
                     }
+                   // console.log(state.cards)
                     state.cards = [...state.cards,card]
                 }
-                
+              
                 state.cards=[...state.cards.sort(() => Math.random() - 0.5)]
-                console.log(state.cards)
+               
         },
 
+        matched:(state,action)=>{
+            state.cards.forEach(item =>{
+                if(action.payload.id === item.id){
+                    item.matched=true;
+                    item.isDisabled=true;
+                    console.log('matched')
+                }
+            })
+           
+        },
+        resetCard:(state) =>{
+                
+            state.cards.forEach((card)=>{
+                card.matched =false
+            })
+           
+
+            state.score =0;
+            state.cards=[...state.cards.sort(() => Math.random() - 0.5)]
+           
+        },
+        
+        increaseScore:(state) =>{
+          state.score =  state.score+50;
+        },
+
+        decreaseScore:(state) =>{
+            state.score = state.score-10;
+        }
 
 
     }
 })
 
-export const { initialCards} = gameSlice.actions
+export const cardsSelector = (state)=>state.game.cards
+export const pointSelector = (state) => state.game.score
+
+export const { initialCards,matched,increaseScore,decreaseScore,resetCard} = gameSlice.actions
 
 export default gameSlice.reducer
