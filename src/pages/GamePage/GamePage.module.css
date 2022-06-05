@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background-color: 	#D8BFD8;
     font-family: 'Nunito', sans-serif;
+    height: 100%;
 }
 .GameContainer{
  place-items: center;
