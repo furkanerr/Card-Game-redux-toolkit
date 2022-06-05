@@ -1,0 +1,36 @@
+.PointContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+
+.PointContainer p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    
+}
+
+.reStartButton{
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 10px;
+    transition: all ease-in 0.2s;
+    cursor: pointer;
+    color: #c5abc5;
+    font-size: 1rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reStartButton:hover{
+    transform: scale(1.1);
+    background-color: #c5abc5;
+    color: white;
+    border: 1px solid white;
+}

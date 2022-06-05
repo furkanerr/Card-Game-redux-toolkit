@@ -7,7 +7,8 @@ const Header = () => {
   return (
     <main className={styles.container}>
         <article className={styles.PointContainer}>
-            <p>Point:{score}</p>
+            <p>Point: {score}</p>
+            <div className={styles.reStartButton}>Restart Game</div>
         </article>
     </main>
   )
