@@ -46,10 +46,11 @@ const GamePage = () => {
   }, [item1, item2, dispatch]);
 
   const reset = () => {
+    
     setItem1(null);
     setItem2(null);
-
     setDisabled(false);
+    
   };
   const handleClick = (card) => {
     item1 && item1 !== card ? setItem2(card) : setItem1(card);
@@ -57,7 +58,7 @@ const GamePage = () => {
   return (
     <>
       <div className={styles.Container}>
-        <Header />
+        <Header reset={reset}/>
         <div className={styles.GameContainer}>
           {Cards.map((card, index) => {
             return (
@@ -65,7 +66,7 @@ const GamePage = () => {
                 key={index}
                 card={card}
                 handleSelectedCard={handleClick}
-                selected={card === item1 || card === item2}
+                selected={(card === item1 || card === item2)}
                 disabled={disabled}
               />
             );
