@@ -19,6 +19,11 @@
     
 }
 
+.back{
+    
+    font-size: 50px;
+    color: white;
+}
 
 img {
   width: 100%;
@@ -41,6 +46,7 @@ img {
     transition-delay: 0.2s;
     place-items: center;
     
+    
   }
   
   .flipped .front{
@@ -55,4 +61,6 @@ img {
   .flipped .back{
     transform: rotateY(90deg);
     transition-delay: 0s;
+    
+   
   }
