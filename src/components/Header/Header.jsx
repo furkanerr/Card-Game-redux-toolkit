@@ -1,21 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 //styles
 import styles from "./Header.module.css";
 //redux
 import { useSelector, useDispatch } from "react-redux";
-import { pointSelector, initialCards, resetCard } from "../../features/gameSlice";
-const Header = ({reset}) => {
+import { pointSelector, resetCard, removeCard } from "../../features/gameSlice";
+
+const Header = ({ reset }) => {
   const dispatch = useDispatch();
   const score = useSelector(pointSelector);
 
-  const handleClick=()=>{
-      dispatch(resetCard())
-     // dispatch(initialCards())
-     setTimeout(() => {
-      reset();
-    }, 1000);
-      console.log('çalişti');
-  }
+  const handleClick = () => {
+    dispatch(resetCard());
+    reset();
+  };
+
+  const handleHomePageClick = () => {
+    dispatch(removeCard());
+    reset();
+  };
   return (
     <main className={styles.container}>
       <article className={styles.PointContainer}>
@@ -23,6 +27,11 @@ const Header = ({reset}) => {
         <div className={styles.reStartButton} onClick={handleClick}>
           Restart Game
         </div>
+        <Link to={"/"}>
+          <div className={styles.reStartButton} onClick={handleHomePageClick}>
+            Home Page
+          </div>
+        </Link>
       </article>
     </main>
   );
