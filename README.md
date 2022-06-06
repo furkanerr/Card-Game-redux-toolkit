@@ -1,3 +1,10 @@
+# Card Memory Game
+* You have 10 cards.
+* When you find identical cards you will get 50 points.
+* If you select wrong cards you are going to lose 10 points.
+* When the game is over point will be added to the local storage and displayed on the Home Page.
+
+ -----------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
