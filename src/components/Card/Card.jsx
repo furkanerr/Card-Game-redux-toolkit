@@ -2,31 +2,52 @@ import React from "react";
 
 //Styles
 import styles from "./Card.module.css";
+import { motion } from "framer-motion";
 
 const Card = ({ card, handleSelectedCard, disabled, selected }) => {
-  console.log(selected)
- // console.log(disabled)
   const handleClick = () => {
     if (disabled === false) {
       handleSelectedCard(card);
     }
   };
   return (
-    <div className="card">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 1,
+      }}
+      className="card"
+    >
       <div
         className={
           card.matched === true || selected ? styles.flipped : styles.Container
         }
         onClick={() => handleClick()}
       >
-        {
-           card.matched === true || selected ?<img className={styles.front} src={card.src} alt="resim" />
-           :<div className={styles.back}>?</div>
-        }
-        
-        
+        {card.matched === true || selected ? (
+          <img className={styles.front} src={card.src} alt="resim" />
+        ) : (
+          <motion.div
+            initial={{
+              scale: 2.5,
+              opacity: 0,
+            }}
+            animate={{
+              scale: 1,
+              rotate: 360,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            className={styles.back}
+          >
+            ?
+          </motion.div>
+        )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
