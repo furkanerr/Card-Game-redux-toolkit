@@ -20,7 +20,7 @@ export const gameSlice = createSlice({
                         matched:false,
                         
                     }
-                   // console.log(state.cards)
+                 
                     state.cards = [...state.cards,card]
                 }
               
@@ -33,7 +33,7 @@ export const gameSlice = createSlice({
                 if(action.payload.id === item.id){
                     item.matched=true;
                     item.isDisabled=true;
-                    console.log('matched')
+                    
                 }
             })
            
