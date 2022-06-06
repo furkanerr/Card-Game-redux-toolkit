@@ -38,18 +38,19 @@ export const gameSlice = createSlice({
             })
            
         },
-        resetCard:(state) =>{
-                
+        resetCard:(state) =>{   
+               
             state.cards.forEach((card)=>{
                 card.matched =false
             })
-           
-
             state.score =0;
-            state.cards=[...state.cards.sort(() => Math.random() - 0.5)]
+            state.cards.sort(() => Math.random() - 0.5)
            
         },
-        
+        removeCard:(state) =>{
+            state.cards =[]
+            state.score =0;
+        },
         increaseScore:(state) =>{
           state.score =  state.score+50;
         },
@@ -65,6 +66,6 @@ export const gameSlice = createSlice({
 export const cardsSelector = (state)=>state.game.cards
 export const pointSelector = (state) => state.game.score
 
-export const { initialCards,matched,increaseScore,decreaseScore,resetCard} = gameSlice.actions
+export const { initialCards,matched,increaseScore,decreaseScore,resetCard,removeCard} = gameSlice.actions
 
 export default gameSlice.reducer
