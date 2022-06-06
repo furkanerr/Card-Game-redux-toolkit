@@ -1,25 +1,20 @@
-.Container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-    background-color: 	#D8BFD8;
-    font-family: 'Nunito', sans-serif;
-    height: 100vh;
-   
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  height: 100%;
 }
-.GameContainer{
- place-items: center;
-    display: grid;
-    row-gap: 0.5rem;
-    column-gap: 0.5rem;
-    grid-template-columns: repeat(5, 1fr);
-
+.GameContainer {
+  place-items: center;
+  display: grid;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 @media screen and (max-width: 375px) {
-    .GameContainer{
-        width: 100%;
-    }
+  .GameContainer {
+    width: 100%;
+  }
 }
-    
