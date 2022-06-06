@@ -37,7 +37,7 @@ const GamePage = () => {
       setDisabled(true);
       if (item1.src === item2.src) {
         if (isEnd < 10) {
-          console.log(isEnd);
+          
           setIsEnd(isEnd + 1);
         } else {
           setIsEnd(0);
@@ -55,10 +55,10 @@ const GamePage = () => {
   }, [item1, item2, dispatch]);
 
   useEffect(() => {
-    console.log(isEnd);
+   
 
     if (isEnd === 10) {
-      console.log("çalişti");
+      
       if (localStorage.getItem("point")) {
         let prevPoint = parseInt(localStorage.getItem("point"));
         localStorage.setItem("point", prevPoint + score);
