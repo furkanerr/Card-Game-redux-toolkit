@@ -1,5 +1,5 @@
 .Container {
-  width: 150px;
+  width: 120px;
   aspect-ratio: 1;
   border-radius: 10px;
   border: 1px solid white;
@@ -16,7 +16,7 @@
   transform: scale(1.05);
 }
 .flipped{
-    width: 150px;
+    width: 120px;
     aspect-ratio: 1;
     border-radius: 10px;
     border: 1px solid white;
@@ -27,12 +27,11 @@
 }
 
 .back{
-    
     font-size: 50px;
     color: white;
 }
 
-img {
+/* img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -40,8 +39,10 @@ img {
   transition: all ease-in 0.2s;
  
   
+} */
+.card{
+  width: 100%;
 }
-
 .card .front{
     transform: rotateY(90deg);
     transition: all ease-in 0.2s;
@@ -50,17 +51,14 @@ img {
   
   .card .back{
     transition: all ease-in 0.2s;
-    transition-delay: 0.2s;
     place-items: center;
-    
-    
   }
   
   .flipped .front{
     transform: rotateY(0deg);
-    transition-delay: 0.2s;
-    width: 100%;
-  height: 100%;
+
+    width: 6%;
+  /* height: 16%; */
   border-radius: 10px;
 
   }
@@ -70,4 +68,58 @@ img {
     transition-delay: 0s;
     
    
+  }
+
+  @media screen and (max-width: 1440px) {
+    .Container {
+      width: 140px;
+     
+    }
+    .flipped{
+      width: 140px;
+    }
+    .card .front {
+      width: 10%;
+      /* height: 18%; */
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .Container {
+      width: 100px;
+     
+    }
+    .flipped{
+      width: 100px;
+    }
+    .card .front{
+      width: 10%;
+      /* height: 23%; */
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .Container {
+      width: 74px;
+     
+    }
+    .flipped{
+      width: 74px;
+    }
+      
+    .card .front{
+      width: 10%;
+      /* height: 16%;  */
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .Container {
+      width: 65px;
+     
+    }
+    .flipped{
+      width: 65px;
+    }
+    .card .front{
+      width: 17%;
+      /* height: 15%; */
+    }
   }

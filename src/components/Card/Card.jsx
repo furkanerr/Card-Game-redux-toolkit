@@ -17,7 +17,7 @@ const Card = ({ card, handleSelectedCard, disabled, selected }) => {
       transition={{
         duration: 1,
       }}
-      className="card"
+      className={styles.card}
     >
       <div
         className={
@@ -39,7 +39,7 @@ const Card = ({ card, handleSelectedCard, disabled, selected }) => {
               opacity: 1,
             }}
             transition={{
-              duration: 1,
+              duration: 0.3,
             }}
             className={styles.back}
           >
