@@ -1,12 +1,10 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 
+
+import InstaIcon from "../../constant/Icons/Instaıcon";
+import GithubIcon from "../../constant/Icons/GithubIcon";
+import LinkedinIcon from '../../constant/Icons/LinkedinIcon';
 //styles
 import styles from "./footer.module.css";
 
@@ -20,13 +18,15 @@ const Footer = () => {
           rel="noreferrer"
         >
           <div className={styles.insta}>
-            <FontAwesomeIcon className={styles.ıcon} icon={faInstagram} />
+            
+            <InstaIcon  className={styles.ıcon}/>
             Instagram
           </div>
         </a>
         <a href="https://github.com/furkanerr" target="_blank" rel="noreferrer">
           <div className={styles.git}>
-            <FontAwesomeIcon className={styles.ıcon} icon={faGithub} />
+           
+            <GithubIcon className={styles.ıcon}/>
             Github
           </div>
         </a>
@@ -36,7 +36,8 @@ const Footer = () => {
           rel="noreferrer"
         >
           <div className={styles.linkedin}>
-            <FontAwesomeIcon className={styles.ıcon} icon={faLinkedin} />
+            
+            <LinkedinIcon className={styles.ıcon}/>
             Linkedin
           </div>
         </a>
