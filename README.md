@@ -4,6 +4,7 @@
 * If you select wrong cards you are going to lose 10 points.
 * When the game is over point will be added to the local storage and displayed on the Home Page.
 
+### State management handled by redux-toolkit.
  -----------------------
 # Getting Started with Create React App
 
