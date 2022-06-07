@@ -25,6 +25,7 @@ export const gameSlice = createSlice({
                 }
               
                 state.cards=[...state.cards.sort(() => Math.random() - 0.5)]
+                console.log(state.cards)
                
         },
 
