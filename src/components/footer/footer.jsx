@@ -1,7 +1,6 @@
 import React from "react";
 
 
-
 import InstaIcon from "../../constant/Icons/Instaıcon";
 import GithubIcon from "../../constant/Icons/GithubIcon";
 import LinkedinIcon from '../../constant/Icons/LinkedinIcon';
