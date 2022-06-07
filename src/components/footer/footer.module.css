@@ -36,6 +36,13 @@
    border: 1px solid white;
 
 }
+ .ıcon:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: white;
+   
+ 
+ }
 .ıcon{
     font-size: 1.5rem;
 }

@@ -20,14 +20,14 @@ export const gameSlice = createSlice({
                         matched:false,
                         
                     }
-                 
-                    state.cards = [...state.cards,card]
+                    
+                    state.cards = [...state.cards,card]     
+                   
                 }
-               
-                state.cards=[...state.cards.sort(() => Math.random() - 0.5),...state.cards.sort(() => Math.random() - 0.5)]
-                
-               
-               
+                    state.cards=[...state.cards.sort(() => Math.random() - 0.5)]
+                    
+            
+                            
         },
 
         matched:(state,action)=>{
